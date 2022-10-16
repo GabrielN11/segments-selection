@@ -13,6 +13,9 @@ type InitialProps = {
 }
 
 
+/*Esta função realiza um Server Side Render do primeiro produto "Serviços de Beleza" através de uma
+consulta na API. Ela retorna um segmento único e um código de erro booleano.
+*/
 export async function getServerSideProps() {
   try {
     const segments = await fetchData('Serviços de Beleza')
@@ -36,6 +39,11 @@ export async function getServerSideProps() {
 }
 
 
+/*
+  Componente da página principal, recebe um segmento renderizado no lado do servidor
+  e um código de erro caso haja um problema na consulta da API, exibindo uma
+  mensagem de erro.
+*/
 const Home: NextPage<InitialProps> = (props) => {
   return (
     <Container maxWidth='sm'>

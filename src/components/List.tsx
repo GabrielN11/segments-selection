@@ -8,8 +8,13 @@ type Props = {
   setSelectedSegment: any,
 }
 
+/*
+  Este componente exibe a lista de segmentos procurados, recebe como propriedade
+  os segmentos e dois sets para alterar os respectivos estados quando um segmento é selecionado.
+*/
 function List({ segments, setSelecting, setSelectedSegment }: Props) {
 
+  //Altera os estados quando um segmento é selecionado.
   function handleClick(segment: Segment){
     setSelectedSegment(segment)
     setSelecting(false)

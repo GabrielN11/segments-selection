@@ -6,6 +6,12 @@ type Error = {
     message: string
 }
 
+/*
+    handler recebe as chamadas do frontend, valida os métodos e parâmetros de busca e
+    faz uma busca em um árquivo JSON contentendo os segmentos e suas ID's. A busca é feita
+    por nome. São retornados no máximo 10 segmentos. Caso não haja parâmetro de busca, apenas os
+    10 primeiros segmentos são retornados.
+*/
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Segment[] | Error>

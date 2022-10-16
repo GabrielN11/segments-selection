@@ -2,6 +2,9 @@ import { Box, Typography } from '@mui/material'
 import SegmentIcon from '@mui/icons-material/Segment';
 import React from 'react'
 
+/*
+  Header da página.
+*/
 export default function Header() {
   return (
     <Box component='header' display='flex' alignItems='center' justifyContent='center' marginY='30px'>

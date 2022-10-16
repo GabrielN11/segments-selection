@@ -1,5 +1,10 @@
 import Segment from "../models/Segment";
 
+/*
+    Esta função realiza a chamada assincrona a API. Recebe como parâmetro a query
+    de busca e envia na URL da API. Retorna um JSON e o converte para Objeto da classe Segment.
+    Caso haja um erro, exibe um erro no console e invoca outro erro para ser tratado nos componentes.
+*/
 export default async function fetchData(searchParam: string): Promise<Segment[]>{
     try{
         const data = await fetch(process.env.NEXT_PUBLIC_API_URL + '?search=' + searchParam)

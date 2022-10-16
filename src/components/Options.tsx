@@ -8,6 +8,11 @@ type Props = {
   selecting: boolean
 }
 
+/*
+  Este componente exibe os botões na parte inferior da página,
+  caso o selecting seja true, o botão de finalizar cadastro não
+  é exibido até que o usuário escolha um segmento.
+*/
 export default function Options({ selecting }: Props) {
   return (
     <Box display='flex' alignSelf='stretch' gap={{

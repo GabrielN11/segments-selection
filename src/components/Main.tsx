@@ -11,8 +11,15 @@ type Props = {
   segment: Segment
 }
 
+//Componente principal, recebe como propriedade o segmento renderizado no servidor.
 const Main = ({segment}: Props) => {
+  
+  /*Este estado define se o usuário está escolhendo um novo segmento,
+  caso esteja, alguns componentes não são exibidos enquanto outros são.*/
   const [selecting, setSelecting] = React.useState<boolean>(false)
+
+  /* Este estado representa o segmento selecionado pelo usuário, por padrão
+  é usado o segmento renderizado no servidor*/
   const [selectedSegment, setSelectedSegment] = React.useState<Segment>(segment)
   
   return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Alert, Snackbar } from '@mui/material'
 
+//Este componente exibe uma mensagem de erro caso haja um problema com a API.
 const Error = () => {
   return (
     <Snackbar open={true}>

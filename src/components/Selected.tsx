@@ -9,6 +9,11 @@ type Props = {
     selecting: boolean,
 }
 
+/*
+    Este componente exibe o segmento selecionado, além do botão para habilitar
+    a busca por outros segmentos. Recebe como propriedade o segmento, o setSelecting
+    para habilitar a busca de segmentos e o selecting para habilitar a animação do componente Grow.
+*/
 export default function Selected({ segment, setSelecting, selecting }: Props) {
     return (
         <Grow in={!selecting}>
