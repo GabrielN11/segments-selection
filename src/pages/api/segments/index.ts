@@ -12,7 +12,7 @@ type Error = {
     por nome. São retornados no máximo 10 segmentos. Caso não haja parâmetro de busca, apenas os
     10 primeiros segmentos são retornados.
 */
-/*export default async function handler(
+export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Segment[] | Error>
 ) {
@@ -37,5 +37,3 @@ type Error = {
         return res.status(200).json(filteredSegments)
     }
 }
-
-*/

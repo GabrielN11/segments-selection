@@ -1,9 +1,9 @@
 export default class Segment {
     id: number
-    descricao: string
+    name: string
   
-    constructor(id: number, descricao: string){
+    constructor(id: number, name: string){
       this.id = id
-      this.descricao = descricao
+      this.name = name
     }
   }

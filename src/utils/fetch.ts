@@ -7,12 +7,8 @@ import Segment from "../models/Segment";
 */
 export default async function fetchData(searchParam: string): Promise<Segment[]>{
     try{
-        const data = await fetch(process.env.NEXT_PUBLIC_API_URL + '/api/v1/Segmento?Descricao=' + searchParam + '&Page=1', {
-            headers: {
-                Domain: 'app.touchone.com.br'
-            }
-        })
-        const segments: Segment[] = (await data.json()).list
+        const data = await fetch(process.env.NEXT_PUBLIC_API_URL + '/api/segments?search=' + searchParam)
+        const segments: Segment[] = await data.json()
         return segments
     }catch(e){
         console.log(e)

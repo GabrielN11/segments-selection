@@ -22,7 +22,7 @@ export default function Selected({ segment, setSelecting, selecting }: Props) {
                     xs: 22,
                     sm: 25,
                     md: 44
-                }}>{segment.descricao}</Typography>
+                }}>{segment.name}</Typography>
                 <IconButton color='primary' aria-label='editar' onClick={() => setSelecting(true)}>
                     <EditIcon fontSize='large' />
                 </IconButton>
