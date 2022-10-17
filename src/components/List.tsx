@@ -29,7 +29,7 @@ function List({ segments, setSelecting, setSelectedSegment }: Props) {
       {segments.map(segment => (
         <ListItemButton key={segment.id} component="button" sx={{alignSelf: 'stretch' }}
         onClick={() => handleClick(segment)}>
-          <ListItemText primary={segment.name} sx={{
+          <ListItemText primary={segment.descricao} sx={{
             backgroundColor: 'rgb(245, 245, 245)', color: 'rgb(137, 137, 137)',
             border: '1px solid rgb(137, 137, 137)', padding: '5px', textAlign: 'center'
           }} />

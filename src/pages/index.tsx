@@ -18,7 +18,7 @@ consulta na API. Ela retorna um segmento único e um código de erro booleano.
 */
 export async function getServerSideProps() {
   try {
-    const segments = await fetchData('Serviços de Beleza')
+    const segments = await fetchData('Beleza')
     return {
       props: {
         segment: segments[0],
